@@ -50,5 +50,89 @@ export const components: ComponentItem[] = [
       icon: '',
       nativeType: 'button'
     }
+  },
+  {
+    type: 'input-number',
+    icon: 'Money',
+    label: '计数器',
+    value: 0,
+    field: 'inputNumber',
+    showLabel: true,
+    labelWidth: 90,
+    required: true,
+    attrs: {
+      min: 0,
+      max: 100,
+      step: 1,
+      stepStrictly: false,
+      precision: 0,
+      size: 'large',
+      disabled: false,
+      controls: true,
+      controlsPosition: '',
+      placeholder: '请输入金额'
+    }
+  },
+  {
+    type: 'switch',
+    label: '开关',
+    icon: 'Switch',
+    value: false,
+    field: 'switch',
+    showLabel: true,
+    required: true,
+    labelWidth: 90,
+    attrs: {
+      disabled: false,
+      loading: false,
+      width: 40,
+      activeIcon: '',
+      inactiveIcon: '',
+      activeText: '',
+      inactiveText: '',
+      activeValue: true,
+      inactiveValue: false,
+      activeColor: '#409EFF',
+      inactiveColor: '#C0CCDA',
+      borderColor: '',
+    }
+  },
+  {
+    type: 'rate',
+    label: '评分',
+    icon: 'Star',
+    showLabel: true,
+    required: true,
+    labelWidth: 90,
+    value: 3,
+    field: 'star',
+    attrs: {
+      max: 5,
+      disabled: false,
+      allowHalf: false,
+      voidColor: '#C6D1DE',
+      disabledVoidColor: '#EFF2F7',
+      voidIcon: 'Star',
+      disabledVoidIcon: 'StarFilled',
+      showText: true,
+      showScore: true,
+      textColor: '',
+    }
+  },
+  {
+    type: 'color-picker',
+    icon: 'Pointer',
+    label: '取色器',
+    value: '',
+    field: 'color',
+    showLabel: true,
+    required: true,
+    labelWidth: 90,
+    attrs: {
+      disabled: false,
+      showAlpha: false,
+      size: '',
+      colorFormat: 'rgb',
+    }
   }
 ]

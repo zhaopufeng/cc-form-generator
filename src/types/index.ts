@@ -1,5 +1,9 @@
 import { ButtonAttrs } from "./buttonAttrs"
+import { ColorPickerAttrs } from "./colorPicker"
 import { InputAttrs } from "./inputAttrs"
+import { InputNumberAttrs } from './inputNumberAttrs'
+import { RateAttrs } from "./rateAttrs"
+import { SwitchAttrs } from "./switchAttrs"
 
 export type SizeProps = '' | 'mini' | 'small' | 'medium'
 export type TypeProps = 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'text'
@@ -18,5 +22,5 @@ export interface ComponentItem {
   labelWidth: number | string,
   suffix?: string,
   prefix?: string,
-  attrs: InputAttrs | ButtonAttrs
+  attrs: InputAttrs | ButtonAttrs | InputNumberAttrs | SwitchAttrs | RateAttrs | ColorPickerAttrs
 }

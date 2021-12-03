@@ -43,11 +43,39 @@
                 :icon="(Icons as any)[item.attrs.icon]"
               >{{ item.attrs.text }}</el-button>
             </template>
+            <template v-else-if="item.type === 'color-picker'">
+              <el-color-picker
+                v-if="item.attrs.colorFormat === 'rgb'"
+                v-model="item.value"
+                v-bind="item.attrs"
+                color-format="rgb"
+              ></el-color-picker>
+              <el-color-picker
+                v-if="item.attrs.colorFormat === 'hex'"
+                v-model="item.value"
+                v-bind="item.attrs"
+                color-format="hex"
+              ></el-color-picker>
+              <el-color-picker
+                v-if="item.attrs.colorFormat === 'hsl'"
+                v-model="item.value"
+                v-bind="item.attrs"
+                color-format="hsl"
+              ></el-color-picker>
+              <el-color-picker
+                v-if="item.attrs.colorFormat === 'hsv'"
+                v-model="item.value"
+                v-bind="item.attrs"
+                color-format="hsv"
+              ></el-color-picker>
+            </template>
             <component
               v-else
               :is="`el-${item.type}`"
               v-bind="{
                 ...item.attrs,
+                activeIcon: (Icons as any)[item.attrs.activeIcon],
+                inactiveIcon: (Icons as any)[item.attrs.inactiveIcon],
               }"
               v-model="item.value"
             >

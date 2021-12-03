@@ -4,6 +4,10 @@
       <div style="padding: 10px" v-if="current">
         <input-attrs v-if="current.type === 'input'"></input-attrs>
         <button-attrs v-if="current.type === 'button'"></button-attrs>
+        <input-number-attrs v-if="current.type === 'input-number'"></input-number-attrs>
+        <switch-attrs v-if="current.type === 'switch'"></switch-attrs>
+        <rate-attrs v-if="current.type === 'rate'"></rate-attrs>
+        <color-picker-attrs v-if="current.type === 'color-picker'"></color-picker-attrs>
       </div>
       <div v-else style="position: relative;top: 150px;">
         <el-result title="还没有数据喔" sub-title="赶快拖拽组件来生成你的表单吧">
@@ -304,6 +308,10 @@ import { useStore } from 'vuex'
 import { ComponentItem } from '@/types'
 import inputAttrs from '../componentAttrs/inputAttrs/index.vue'
 import buttonAttrs from '../componentAttrs/buttonAttrs/index.vue'
+import inputNumberAttrs from '../componentAttrs/inputNumberAttrs/index.vue'
+import switchAttrs from '../componentAttrs/switchAttrs/index.vue'
+import rateAttrs from '../componentAttrs/rateAttrs/index.vue'
+import colorPickerAttrs from '../componentAttrs/colorPickerAttrs/index.vue'
 
 
 let store = useStore()
